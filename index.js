@@ -51,6 +51,11 @@ const exampleProxy = createProxyMiddleware({
   });
 
 app.use('/bookingservice', exampleProxy)
+app.get('/home1' , (req , res) => {
+    return res.json({
+        "message" : "OK"
+    })
+})
 
 const SetupAndStartServer = () => {
 
